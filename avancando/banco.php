@@ -4,7 +4,7 @@ require 'funcoes.php';
 
 $contasCorrentes = [
    '12345678910' => [
-    'nome' => 'Patrícia',
+    'titular' => 'Patricia',
     'saldo' => 1000
     ]
 ];
@@ -16,9 +16,14 @@ $contasCorrentes ['12345678910'] = depositar (
     $contasCorrentes['12345678910'],
     900
 );
+
+titularComLetrasMaiusculas (
+    $contasCorrentes['12345678910']
+);
+
 foreach($contasCorrentes as $cpf => $conta) {
     exibirMensagem (
-        "$cpf {$conta['nome']} {$conta['saldo']}"
+        "$cpf {$conta['titular']} {$conta['saldo']}"
     );
 }
 ?>

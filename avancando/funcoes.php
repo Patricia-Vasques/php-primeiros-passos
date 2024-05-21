@@ -18,3 +18,10 @@ function depositar(&$conta, $valorADepositar) {
     }
     return $conta;
 }
+
+//Ao colocar & antes do parâmetro, estamos passando a referência da variável, e não uma cópia dela.
+function titularComLetrasMaiusculas(array &$conta) {
+    // strtoupper coloca toda a string em letra maiúscula
+   $conta['titular'] =  strtoupper ($conta['titular']);
+   echo $conta['titular'] . PHP_EOL;
+}
